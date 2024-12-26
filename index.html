@@ -55,7 +55,7 @@
 </head>
 <body>
     <h1>Callback Hell Example</h1>
-    <button onclick="startProcess()">Start Process</button>
+    <button onclick="startProcess()">Place the Order</button>
     <div id="output"></div>
 
     <script>
@@ -94,9 +94,9 @@
                             // Adding "Step 4" message
                             const step4Div = document.createElement("div");
                             step4Div.className = "message";
-                            step4Div.innerText = "Step 4: Packing the Pizza";
+                            step4Div.innerText = "Step 4: Packing the Pizza...";
                             output.appendChild(step4Div);
-
+                            setTimeout(() => {
                             // Adding "All steps completed" message
                             const completedDiv = document.createElement("div");
                             completedDiv.className = "message";
@@ -106,6 +106,7 @@
                     }, 1000);
                 }, 1000);
             }, 1000);
+        },1000);
         }
     </script>
 </body>
