@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4caf50;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-left: 4px solid #4caf50;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .message:hover {
+            background-color: #c8e6c9;
+            transform: scale(1.02);
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Callback Hell Example</h1>
+    <button onclick="startProcess()">Start Process</button>
+    <div id="output"></div>
+
+    <script>
+        function startProcess() {
+            const output = document.getElementById("output");
+            output.innerHTML = ""; // Clear previous messages
+
+            // Adding the "Start" message
+            const startDiv = document.createElement("div");
+            startDiv.className = "message";
+            startDiv.innerText = "Start";
+            output.appendChild(startDiv);
+
+            setTimeout(() => {
+                // Adding "Step 1" message
+                const step1Div = document.createElement("div");
+                step1Div.className = "message";
+                step1Div.innerText = "Step 1: Fetching user data...";
+                output.appendChild(step1Div);
+
+                setTimeout(() => {
+                    // Adding "Step 2" message
+                    const step2Div = document.createElement("div");
+                    step2Div.className = "message";
+                    step2Div.innerText = "Step 2: Fetching orders for user...";
+                    output.appendChild(step2Div);
+
+                    setTimeout(() => {
+                        // Adding "Step 3" message
+                        const step3Div = document.createElement("div");
+                        step3Div.className = "message";
+                        step3Div.innerText = "Step 3: Fetching order details...";
+                        output.appendChild(step3Div);
+
+                        setTimeout(() => {
+                            // Adding "Step 4" message
+                            const step4Div = document.createElement("div");
+                            step4Div.className = "message";
+                            step4Div.innerText = "Step 4: Confirming order shipment...";
+                            output.appendChild(step4Div);
+
+                            // Adding "All steps completed" message
+                            const completedDiv = document.createElement("div");
+                            completedDiv.className = "message";
+                            completedDiv.innerText = "All steps completed!";
+                            output.appendChild(completedDiv);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
