@@ -73,34 +73,34 @@
                 // Adding "Step 1" message
                 const step1Div = document.createElement("div");
                 step1Div.className = "message";
-                step1Div.innerText = "Step 1: Fetching user data...";
+                step1Div.innerText = "Step 1: Place the Order !";
                 output.appendChild(step1Div);
 
                 setTimeout(() => {
                     // Adding "Step 2" message
                     const step2Div = document.createElement("div");
                     step2Div.className = "message";
-                    step2Div.innerText = "Step 2: Fetching orders for user...";
+                    step2Div.innerText = "Step 2: Preparing the Pizza....";
                     output.appendChild(step2Div);
 
                     setTimeout(() => {
                         // Adding "Step 3" message
                         const step3Div = document.createElement("div");
                         step3Div.className = "message";
-                        step3Div.innerText = "Step 3: Fetching order details...";
+                        step3Div.innerText = "Step 3: Bakeing the Pizza...";
                         output.appendChild(step3Div);
 
                         setTimeout(() => {
                             // Adding "Step 4" message
                             const step4Div = document.createElement("div");
                             step4Div.className = "message";
-                            step4Div.innerText = "Step 4: Confirming order shipment...";
+                            step4Div.innerText = "Step 4: Packing the Pizza";
                             output.appendChild(step4Div);
 
                             // Adding "All steps completed" message
                             const completedDiv = document.createElement("div");
                             completedDiv.className = "message";
-                            completedDiv.innerText = "All steps completed!";
+                            completedDiv.innerText = "Pizza DELIVERED !";
                             output.appendChild(completedDiv);
                         }, 1000);
                     }, 1000);
